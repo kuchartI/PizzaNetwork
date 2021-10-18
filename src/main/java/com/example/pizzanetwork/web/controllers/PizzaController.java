@@ -25,10 +25,10 @@ public class PizzaController {
         return pizzaService.findAll();
     }
 
-    @GetMapping("name/{name}")
+    @GetMapping(value = "/")
     @PreAuthorize("hasAnyAuthority('ROLE_USER','ROLE_ADMIN')")
     @ApiOperation("Get pizzas by name")
-    public List<PizzaDto> findAllByName(@PathVariable String name) {
+    public List<PizzaDto> findAllByName(@RequestParam String name) {
         return pizzaService.findAllPizzaByName(name);
     }
 

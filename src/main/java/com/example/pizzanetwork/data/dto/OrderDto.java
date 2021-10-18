@@ -1,6 +1,5 @@
 package com.example.pizzanetwork.data.dto;
 
-import com.example.pizzanetwork.data.entity.Restaurant;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,6 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderDto {
+
     private Long id;
 
     private Long restaurant_id;

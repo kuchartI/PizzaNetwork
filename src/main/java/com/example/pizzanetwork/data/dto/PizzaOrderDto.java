@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotNull;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -12,5 +14,10 @@ public class PizzaOrderDto {
 
     private Long order_id;
 
-    private String pizza_id;
+    @NotNull
+    private String pizza_name;
+
+    private Long pizza_id;
+
+
 }
