@@ -38,6 +38,6 @@ public class OrderController {
     @PreAuthorize("hasAnyAuthority('ROLE_USER','ROLE_ADMIN')")
     @ApiOperation("Create order")
     public List<PizzaOrderDto> createOrder(@RequestBody @Valid List<PizzaOrderDto> pizzaOrderDto) {
-        return orderService.createPizzaOrder(pizzaOrderDto);
+        return orderService.createPizzaOrders(pizzaOrderDto);
     }
 }

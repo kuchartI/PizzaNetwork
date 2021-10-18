@@ -13,15 +13,11 @@ import java.sql.Time;
 public class RestaurantDto {
     private Long id;
 
-    @NotNull
     private String address;
 
-    @NotNull
     private Time start_of_work;
 
-    @NotNull
     private Time end_of_work;
 
-    @NotNull
     private String phone;
 }
