@@ -12,6 +12,7 @@ public class RestaurantPizzaService {
 
 
     private final RestaurantPizzaRepository restaurantPizzaRepository;
+
     @Autowired
     public RestaurantPizzaService(RestaurantPizzaRepository restaurantPizzaRepository) {
         this.restaurantPizzaRepository = restaurantPizzaRepository;

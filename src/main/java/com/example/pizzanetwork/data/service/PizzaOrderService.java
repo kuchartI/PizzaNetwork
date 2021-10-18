@@ -12,13 +12,14 @@ public class PizzaOrderService {
 
 
     private final PizzaOrderRepository pizzaOrderRepository;
+
     @Autowired
     public PizzaOrderService(PizzaOrderRepository pizzaOrderRepository) {
         this.pizzaOrderRepository = pizzaOrderRepository;
     }
 
     public int count() {
-        return (int)pizzaOrderRepository.count();
+        return (int) pizzaOrderRepository.count();
     }
 
     public PizzaOrder findById(Long id) {

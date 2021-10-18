@@ -1,12 +1,18 @@
 package com.example.pizzanetwork.data.entity;
 
 import com.sun.istack.NotNull;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "topping")
+@Getter
+@Setter
+@ToString
 public class Topping {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,27 +26,4 @@ public class Topping {
     @Column(name = "price")
     private BigDecimal price;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTopping_name() {
-        return topping_name;
-    }
-
-    public void setTopping_name(String topping_name) {
-        this.topping_name = topping_name;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
 }

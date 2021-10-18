@@ -1,11 +1,16 @@
 package com.example.pizzanetwork.data.entity;
 
 import com.sun.istack.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "restaurant_pizza")
+@Getter
+@Setter
+
 public class RestaurantPizza {
 
     @Id
@@ -26,35 +31,4 @@ public class RestaurantPizza {
     @Column(name = "available")
     private boolean available;
 
-    public Restaurant getRestaurant_id() {
-        return restaurant_id;
-    }
-
-    public void setRestaurant_id(Restaurant restaurant_id) {
-        this.restaurant_id = restaurant_id;
-    }
-
-    public Pizza getPizza_id() {
-        return pizza_id;
-    }
-
-    public void setPizza_id(Pizza pizza_id) {
-        this.pizza_id = pizza_id;
-    }
-
-    public boolean isAvailable() {
-        return available;
-    }
-
-    public void setAvailable(boolean available) {
-        this.available = available;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }

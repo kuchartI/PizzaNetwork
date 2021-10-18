@@ -1,6 +1,8 @@
 package com.example.pizzanetwork.data.entity;
 
 import com.sun.istack.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -8,6 +10,8 @@ import java.util.Date;
 
 @Entity
 @Table(name = "\"order\"")
+@Getter
+@Setter
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,34 +30,4 @@ public class Order {
     @Column(name = "time_date")
     private Date time_date;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public Restaurant getRestaurant_id() {
-        return restaurant_id;
-    }
-
-    public void setRestaurant_id(Restaurant restaurant_id) {
-        this.restaurant_id = restaurant_id;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
-
-    public Date getDate() {
-        return time_date;
-    }
-
-    public void setDate(Date time_date) {
-        this.time_date = time_date;
-    }
 }

@@ -56,7 +56,7 @@ public class OrderService {
     }
 
     private OrderDto createOrderDto(Order order) {
-        return new OrderDto(order.getId(), order.getRestaurant_id().getId(), order.getPrice(), order.getDate());
+        return new OrderDto(order.getId(), order.getRestaurant_id().getId(), order.getPrice(), order.getTime_date());
     }
 
     private PizzaOrderDto createPizzaOrderDto(PizzaOrder pizzaOrder) {
@@ -77,13 +77,14 @@ public class OrderService {
         final var result = pizzaOrderRepository.getAllByOrderId((long) id);
         return result.stream().map(this::createPizzaOrderDto).collect(Collectors.toList());
     }
+
     @ExceptionHandler(Http400BadRequest.class)
     public List<PizzaOrderDto> createPizzaOrders(List<PizzaOrderDto> pizzaOrderDto) {
         logger.info("create pizza orders");
         var order = new Order();
         final BigDecimal[] price = {new BigDecimal(0)};
         Random random = new Random();
-        order.setDate(new Date());
+        order.setTime_date(new Date());
         pizzaOrderDto.forEach(it ->
         {
             price[0] = price[0].add(pizzaRepository.getById(it.getPizza_id()).getPrice());

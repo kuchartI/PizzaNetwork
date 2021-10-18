@@ -1,7 +1,6 @@
 package com.example.pizzanetwork.web.controllers;
 
 import com.example.pizzanetwork.data.dto.OrderDto;
-import com.example.pizzanetwork.data.dto.PizzaDto;
 import com.example.pizzanetwork.data.dto.PizzaOrderDto;
 import com.example.pizzanetwork.data.service.OrderService;
 import io.swagger.annotations.Api;

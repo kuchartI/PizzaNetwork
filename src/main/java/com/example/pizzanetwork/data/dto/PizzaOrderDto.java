@@ -11,13 +11,14 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 public class PizzaOrderDto {
     private Long id;
+
     @NotNull
     private Long order_id;
 
     @NotNull
     private String pizza_name;
+
     @NotNull
     private Long pizza_id;
-
 
 }

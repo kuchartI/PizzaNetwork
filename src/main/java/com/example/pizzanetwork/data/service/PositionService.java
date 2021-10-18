@@ -11,6 +11,7 @@ import java.util.List;
 public class PositionService {
 
     private final PositionRepository positionRepository;
+
     @Autowired
     public PositionService(PositionRepository positionRepository) {
         this.positionRepository = positionRepository;

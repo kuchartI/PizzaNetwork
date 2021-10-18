@@ -1,12 +1,16 @@
 package com.example.pizzanetwork.data.entity;
 
 import com.sun.istack.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "pizza")
+@Getter
+@Setter
 public class Pizza {
 
     @Id
@@ -35,66 +39,4 @@ public class Pizza {
     @Column(name = "price")
     private BigDecimal price;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
-    public Category getCategory_id() {
-        return category_id;
-    }
-
-    public void setCategory_id(Category category_id) {
-        this.category_id = category_id;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
-
-
-    @Override
-    public String toString() {
-        return getId() + " " + getName() + " " + getDescription() + " "
-                + getWeight() + " " + getSize() + " " + getCategory_id();
-    }
 }

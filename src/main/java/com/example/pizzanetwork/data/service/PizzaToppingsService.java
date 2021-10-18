@@ -12,6 +12,7 @@ public class PizzaToppingsService {
 
 
     private final PizzaToppingsRepository pizzaToppingsRepository;
+
     @Autowired
     public PizzaToppingsService(PizzaToppingsRepository pizzaToppingsRepository) {
         this.pizzaToppingsRepository = pizzaToppingsRepository;

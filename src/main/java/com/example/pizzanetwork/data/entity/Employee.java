@@ -1,11 +1,15 @@
 package com.example.pizzanetwork.data.entity;
 
 import com.sun.istack.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "employee")
+@Getter
+@Setter
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,59 +40,4 @@ public class Employee {
     @JoinColumn(name = "position_id")
     private Position position_id;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Position getPosition_id() {
-        return position_id;
-    }
-
-    public void setPosition_id(Position position_id) {
-        this.position_id = position_id;
-    }
-
-    public String getSchedule() {
-        return schedule;
-    }
-
-    public void setSchedule(String schedule) {
-        this.schedule = schedule;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public Restaurant getRestaurant_id() {
-        return restaurant_id;
-    }
-
-    public void setRestaurant_id(Restaurant restaurant_id) {
-        this.restaurant_id = restaurant_id;
-    }
-
-    public String getEmployee_surname() {
-        return employee_surname;
-    }
-
-    public void setEmployee_surname(String employee_surname) {
-        this.employee_surname = employee_surname;
-    }
-
-    public String getEmployee_name() {
-        return employee_name;
-    }
-
-    public void setEmployee_name(String employee_name) {
-        this.employee_name = employee_name;
-    }
 }
